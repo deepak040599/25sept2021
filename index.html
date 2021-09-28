@@ -20,7 +20,7 @@
         }
 
         body {
-            background-image: url(./img/assets/01/rabbit.svg), url(./img/assets/01/Footer.svg), url(./img/assets/01/Blue.svg), url(./img/assets/01/Orange.svg);
+            background-image: url(img/assets/01/rabbit.svg), url(img/assets/01/Footer.svg), url(img/assets/01/Blue.svg), url(img/assets/01/Orange.svg);
             background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
             background-size: auto, 1600px 850px, 1600px 800px, 1600px 800px;
             background-position: 100px 660px, -35px 615px, -35px -60px, -42px 170px;
@@ -35,9 +35,6 @@
         .d_main {
             min-height: 900px;
         }
-
-        footer {}
-
         .d_header_nav>li>a {
             padding: 61px 32px 20px 32px;
             border-bottom-left-radius: 10px;
@@ -60,9 +57,9 @@
             background: #744c97;
         }
 
-        /* .d_userlink{
-            color:#c3a8db;
-        } */
+        .d_userlink{
+            color:#fff;
+        }
         .d_header_nav>li:last-child>a {
             color: #c3a8db;
         }
@@ -97,63 +94,55 @@
             transform: all linear 0.2s;
             height: 252px;
             background: #5264bb;
-
         }
+        @media screen and (max-width: 992px) {
+            .d_header_nav{
+                background: #573e70;
+            }
+            .d_header_nav a{
+                padding-left: 30px !important;
+                border-bottom: 1px solid #744c97;
+                border-radius: 0px !important;
+            }
+  
+}
     </style>
 </head>
 
 <body>
     <div class="container  p-0">
         <header class="">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light ">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
+                    <a class="navbar-brand" href="#">
+                        <img src="img/assets/01/Ideal-logo-07.png" height="30">
+                    </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
+                    <div class="collapse navbar-collapse d-flex justify-content-end row m-0" id="navbarNav">
+                        <ul class="navbar-nav  d_header_nav float-end col-12 col-sm-12 col-md-12 col-lg-5 active pe-0">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Features</a>
+                                <a class="nav-link text-white" href="#">Services</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
+                                <a class="nav-link text-white" href="#">Our Plans</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled">Disabled</a>
+                                <a class="nav-link text-white">Tools &amp; Resources</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link position-relative d_userlink pe-0" href="#"><span class=" d-inline-block d_circle position-absolute top-50 " style="left: -10px; "></span>Nidhi Bokadiya <i class="fas fa-chevron-down"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <div class="clearfix"></div>
-            <a href="#" class="float-start mt-5">
-                <img src="./img/assets/01/Ideal-logo-07.png" height="30">
-            </a>
-            <ul class="nav float-end d_header_nav">
-                <li class="nav-item">
-                    <a class="nav-link text-white active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Our Plans</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white " href="#">Tools &amp; Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link position-relative d_userlink pe-0" href="#"><span
-                            class=" d-inline-block d_circle position-absolute top-50 " style="left: -10px; "></span>
-                        Nidhi Bokadiya <i class="fas fa-chevron-down"></i></a>
-                </li>
-            </ul>
-        </header>
+</header>
         <div class="d_main  text-white">
             <h1>Welcome Nidhi Bokadiya </h1>
             <p>How can we help you?</p>
@@ -161,7 +150,7 @@
             <div class="row ">
                 <div class="col-12 col-sm-3 mb-3">
                     <div class="rounded rounded-3 d_panel1 d_panel p-3">
-                        <img src="./img/assets/01/launch.svg" alt="">
+                        <img src="img/assets/01/launch.svg" alt="">
                         <h3 class="mb-4">Innovation Decision Hub</h3>
                         <div class="d_panel_c1 d-none "></div>
                         <a href="#" class="float-end text-white text-decoration-none">Learn More<i
