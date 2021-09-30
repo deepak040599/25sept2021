@@ -20,6 +20,7 @@
         }
 
         body {
+            background-color: #f3f3f3;
             background-image: url(img/assets/01/rabbit.svg), url(img/assets/01/Footer.svg), url(img/assets/01/Blue.svg), url(img/assets/01/Orange.svg);
             background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
             background-size: auto, 1600px 850px, 1600px 800px, 1600px 800px;
@@ -31,12 +32,21 @@
             height: 130px;
             /* background: #442460; */
         }
+        .fa-bars{
+            color: #fff !important  ;
+        }
+        header .navbar-toggler {
+            border: 1px solid #fff !important;
+        }
+        .navbar-toggler:focus {
+            box-shadow: none !important;
+        }
 
         .d_main {
             min-height: 900px;
         }
         .d_header_nav>li>a {
-            padding: 61px 32px 20px 32px;
+            padding: 61px 32px 20px 32px !important;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
         }
@@ -60,6 +70,7 @@
         .d_userlink{
             color:#fff;
         }
+        
         .d_header_nav>li:last-child>a {
             color: #c3a8db;
         }
@@ -92,15 +103,18 @@
 
         .d_panel_c1 {
             transform: all linear 0.2s;
-            height: 252px;
+            min-height: 252px;
             background: #5264bb;
+            text-align: center;
         }
+       .dropdown-toggle::after{
+           display: none;
+       }
         @media screen and (max-width: 992px) {
             .d_header_nav{
                 background: #573e70;
             }
             .d_header_nav a{
-                padding-left: 30px !important;
                 border-bottom: 1px solid #744c97;
                 border-radius: 0px !important;
             }
@@ -112,59 +126,99 @@
 <body>
     <div class="container  p-0">
         <header class="">
-            <nav class="navbar navbar-expand-lg navbar-light ">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="img/assets/01/Ideal-logo-07.png" height="30">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse d-flex justify-content-end row m-0" id="navbarNav">
-                        <ul class="navbar-nav  d_header_nav float-end col-12 col-sm-12 col-md-12 col-lg-5 active pe-0">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white" href="#">Our Plans</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-white">Tools &amp; Resources</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link position-relative d_userlink pe-0" href="#"><span class=" d-inline-block d_circle position-absolute top-50 " style="left: -10px; "></span>Nidhi Bokadiya <i class="fas fa-chevron-down"></i></a>
-                            </li>
+                  <a class="navbar-brand" href="#">
+                    <img src="img/assets/01/Ideal-logo-07.png" height="30">
+                  </a>
+                  <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                  </button>
+                  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                      <div class="me-auto"></div>
+                    <ul class="navbar-nav  float-end mb-2 mb-lg-0  d_header_nav">
+                      <li class="nav-item">
+                        <a class="nav-link active text-white aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Services</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Our Plans</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Tools &amp; Resources</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white d_userlink" href="#" id="navbarDropdown" role="button"  aria-expanded="false">
+                            <span class=" d-inline-block d_circle  " ></span>Nidhi Bokadiya<i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
-                    </div>
+                      </li>
+                     
+                    </ul>
+                   
+                  </div>
                 </div>
-            </nav>
+              </nav>
+
 </header>
-        <div class="d_main  text-white">
+        <div class="d_main  text-white p-3">
             <h1>Welcome Nidhi Bokadiya </h1>
             <p>How can we help you?</p>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             <div class="row ">
-                <div class="col-12 col-sm-3 mb-3">
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
                     <div class="rounded rounded-3 d_panel1 d_panel p-3">
                         <img src="img/assets/01/launch.svg" alt="">
                         <h3 class="mb-4">Innovation Decision Hub</h3>
-                        <div class="d_panel_c1 d-none "></div>
-                        <a href="#" class="float-end text-white text-decoration-none">Learn More<i
+                        <div class="d_panel_c1 d-none ">
+                            <img  class="img-fluid" src="img/e1.png" alt="">
+                        </div>
+                        <a href="#" class="float-end text-white text-decoration-none mt-2">Learn More<i
                                 class="fas fa-chevron-right ms-1"></i></a>
                     </div>
                 </div>
-                <div class="col-12 col-sm-3 mb-3">
-                    <div class="rounded rounded-3 d_panel2 d_panel ">a</div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="rounded rounded-3 d_panel2 d_panel p-3 ">
+                        <img src="img/assets/01/launch.svg" alt="">
+                        <h3 class="mb-4">Innovation Decision Hub</h3>
+                        <div class="d_panel_c1 d-none ">
+                            <img  class="img-fluid" src="img/e2.png" alt="">
+                        </div>
+                        <a href="#" class="float-end text-white text-decoration-none mt-2">Learn More<i
+                                class="fas fa-chevron-right ms-1"></i></a>
+
+                    </div>
                 </div>
-                <div class="col-12 col-sm-3 mb-3">
-                    <div class="rounded rounded-3 d_panel3 d_panel ">a</div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="rounded rounded-3 d_panel3 d_panel p-3">
+                        <img src="img/assets/01/launch.svg" alt="">
+                        <h3 class="mb-4">Innovation Decision Hub</h3>
+                        <div class="d_panel_c1 d-none ">
+                            <img  class="img-fluid" src="img/e3.png" alt="">
+                        </div>
+                        <a href="#" class="float-end text-white text-decoration-none mt-2">Learn More<i
+                                class="fas fa-chevron-right ms-1"></i></a>
+
+                    </div>
                 </div>
-                <div class="col-12 col-sm-3 mb-3">
-                    <div class="rounded rounded-3  d_panel4 d_panel ">a</div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="rounded rounded-3  d_panel4 d_panel p-3">
+                        <img src="img/assets/01/launch.svg" alt="">
+                        <h3 class="mb-4">Innovation Decision Hub</h3>
+                        <div class="d_panel_c1 d-none ">
+                            <img  class="img-fluid" src="img/e4.png" alt="">
+                        </div>
+                        <a href="#" class="float-end text-white text-decoration-none mt-2">Learn More<i
+                                class="fas fa-chevron-right ms-1"></i></a>
+
+                    </div>
                 </div>
             </div>
         </div>
