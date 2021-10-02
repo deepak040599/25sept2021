@@ -64,6 +64,9 @@
             width: 37px;
             height: 37px;
             border-radius: 37px;
+            
+        }
+        .d_soft_pink{
             background: #744c97;
         }
 
@@ -90,7 +93,7 @@
             background: #424d83;
         }
 
-        .d_panel:hover {
+       .d_panel:hover {
             height: 445px;
             background: #798ce7;
             cursor: pointer;
@@ -100,12 +103,27 @@
             display: block !important;
 
         }
-
+        .d_panel1,.d_panel3{
+            background-image: url("img/cloud.png"),url("img/cloud.png"),url("img/cloud.png"),url("img/cloud.png");
+            background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+            background-position: 70% 15%, 85% 10%,40% 15% ,55% 10%;
+            background-size: 30px 20px,25px  15px,30px 20px,25px 15px;
+        }
+        .d_panel2,.d_panel4{
+            background-image: url("img/circle.png"),url("img/circle.png"),url("img/circle.png"),url("img/circle.png");
+            background-repeat: no-repeat,no-repeat,no-repeat,no-repeat;
+            background-position: 70% 15%, 85% 10%,40% 15% ,55% 10%;
+            background-size: 30px 28px,25px  18px,30px 28px,25px 18px;
+        }
+       
         .d_panel_c1 {
             transform: all linear 0.2s;
             min-height: 252px;
             background: #5264bb;
             text-align: center;
+        }
+        header .dropdown-menu a:hover{
+            background-color: #FFB900;
         }
        .dropdown-toggle::after{
            display: none;
@@ -150,14 +168,14 @@
                         <a class="nav-link text-white" href="#">Tools &amp; Resources</a>
                       </li>
                       <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white d_userlink" href="#" id="navbarDropdown" role="button"  aria-expanded="false">
-                            <span class=" d-inline-block d_circle  " ></span>Nidhi Bokadiya<i class="fas fa-chevron-down"></i>
+                        <a class="nav-link dropdown-toggle text-white d_userlink" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class=" d-inline-block d_circle d_soft_pink " ></span >Nidhi Bokadiya<i class="fas fa-chevron-down"></i>
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <ul class="dropdown-menu d_soft_pink" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item text-white" href="#">Action</a></li>
+                          <li><a class="dropdown-item text-white" href="#">Another action</a></li>
                           <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><a class="dropdown-item text-white" href="#">Something else here</a></li>
                         </ul>
                       </li>
                      
@@ -175,8 +193,8 @@
             <div class="row ">
                 <div class="col-12 col-md-6 col-lg-3 mb-3">
                     <div class="rounded rounded-3 d_panel1 d_panel p-3">
-                        <img src="img/assets/01/launch.svg" alt="">
-                        <h3 class="mb-4">Innovation Decision Hub</h3>
+                        <img src="img/assets/01/Icon.svg"alt="">
+                        <h4 class="mb-4">InnovEx Decision Hub</h4>
                         <div class="d_panel_c1 d-none ">
                             <img  class="img-fluid" src="img/e1.png" alt="">
                         </div>
@@ -186,8 +204,8 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 mb-3">
                     <div class="rounded rounded-3 d_panel2 d_panel p-3 ">
-                        <img src="img/assets/01/launch.svg" alt="">
-                        <h3 class="mb-4">Innovation Decision Hub</h3>
+                        <img src="img/assets/01/Group 130.svg" alt="">
+                        <h4 class="mb-4">MarketPlace Vistas & Decision </h4>
                         <div class="d_panel_c1 d-none ">
                             <img  class="img-fluid" src="img/e2.png" alt="">
                         </div>
@@ -198,8 +216,8 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 mb-3">
                     <div class="rounded rounded-3 d_panel3 d_panel p-3">
-                        <img src="img/assets/01/launch.svg" alt="">
-                        <h3 class="mb-4">Innovation Decision Hub</h3>
+                        <img src="img/assets/01/Icon.svg" alt="">
+                        <h4 class="mb-4">SustainEx Decision Hub</h4>
                         <div class="d_panel_c1 d-none ">
                             <img  class="img-fluid" src="img/e3.png" alt="">
                         </div>
@@ -210,8 +228,8 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-3 mb-3">
                     <div class="rounded rounded-3  d_panel4 d_panel p-3">
-                        <img src="img/assets/01/launch.svg" alt="">
-                        <h3 class="mb-4">Innovation Decision Hub</h3>
+                        <img src="img/assets/01/Group 130.svg" alt="">
+                        <h4 class="mb-4">Agile ResearchOps & Knowledge Hubs(ARKH)</h4>
                         <div class="d_panel_c1 d-none ">
                             <img  class="img-fluid" src="img/e4.png" alt="">
                         </div>
