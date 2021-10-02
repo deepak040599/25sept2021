@@ -45,10 +45,14 @@
         .d_main {
             min-height: 900px;
         }
-        .d_header_nav>li>a {
+        .d_header_nav > li > a {
             padding: 61px 32px 20px 32px !important;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
+        }
+        .d_header_nav > li > a:hover{
+            background: #573e70;
+            color: #ffb900 !important;
         }
 
         .active {
@@ -127,6 +131,9 @@
         }
        .dropdown-toggle::after{
            display: none;
+       }
+       .d_footer_nav a:hover{
+           text-decoration: underline !important;
        }
         @media screen and (max-width: 992px) {
             .d_header_nav{
@@ -244,7 +251,7 @@
             <div class="row m-0 mb-5">
                 <div class="col-5  mycolor">
                     <h4 class="fw-bold">FEATURES</h4>
-                    <ul class="nav">
+                    <ul class="nav d_footer_nav">
                         <li class="nav-item">
                             <a class="nav-link " href="#">Beginers Guides</a>
                         </li>
@@ -255,7 +262,7 @@
                 </div>
                 <div class="col-7 ">
                     <h4 class="fw-bold">SUPPORT</h4>
-                    <ul class="nav">
+                    <ul class="nav d_footer_nav">
                         <li class="nav-item">
                             <a class="nav-link " href="#">Help Center</a>
                         </li>
@@ -276,7 +283,7 @@
                         the industry's standard dummy</p>
                 </div>
                 <div class="col-7 ">
-                    <ul class="nav float-end ">
+                    <ul class="nav float-end d_footer_nav">
                         <li class="nav-item">
                             <a class="nav-link " href="#">
                                 <img src="./img/assets/01/twitter.svg">
@@ -304,13 +311,18 @@
         </footer>
     </div>
 
-
-
-
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
-</body>
+<script>
+    (function($){
+        $('.d_header_nav > li > a:hover').click(function(){
+            $('.active').removeClass('active').addClass('text-white');
+            $(this).addClass('active');
+        })
+    })(jQuery);
+</script>
+    </body>
 
 </html>
